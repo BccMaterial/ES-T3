@@ -1,0 +1,73 @@
+@startuml
+title Realização de Reserva com Pagamento e Confirmação
+
+actor Cliente
+
+participant "ReservaService" as ReservaService
+participant "TipoQuarto" as TipoQuarto
+participant "Reserva" as Reserva
+participant "Pagamento" as Pagamento
+participant "GatewayPagamento" as Gateway
+participant "ServicoEmail" as Email
+
+Cliente -> ReservaService : realizarReserva(checkin, checkout,\ntipoQuarto)
+
+activate ReservaService
+
+ReservaService -> TipoQuarto : consultarDisponibilidade(checkin, checkout)
+
+activate TipoQuarto
+TipoQuarto --> ReservaService : disponível / indisponível
+deactivate TipoQuarto
+
+alt Quarto disponível
+
+    ReservaService -> Reserva : criarReserva()
+    activate Reserva
+
+    Reserva --> ReservaService : reserva criada
+    deactivate Reserva
+
+    ReservaService -> Pagamento : processarPagamento(valor)
+
+    activate Pagamento
+
+    Pagamento -> Gateway : autorizarPagamento(valor)
+
+    activate Gateway
+    Gateway --> Pagamento : aprovado / recusado
+    deactivate Gateway
+
+    alt Pagamento aprovado
+
+        Pagamento --> ReservaService : pagamento aprovado
+
+        ReservaService -> Reserva : confirmar()
+
+        ReservaService -> Email : enviarConfirmacao()
+
+        activate Email
+        Email --> ReservaService : e-mail enviado
+        deactivate Email
+
+        ReservaService --> Cliente : reserva confirmada
+
+    else Pagamento recusado
+
+        Pagamento --> ReservaService : pagamento recusado
+
+        ReservaService --> Cliente : falha no pagamento
+
+    end
+
+    deactivate Pagamento
+
+else Quarto indisponível
+
+    ReservaService --> Cliente : quarto indisponível
+
+end
+
+deactivate ReservaService
+
+@enduml
