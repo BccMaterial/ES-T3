@@ -106,4 +106,3 @@
 | Fatia 2 | TC-FATIA2-02 | Transição crítica de estado      |
 | Fatia 3 | TC-FATIA3-01 | Caminho feliz                    |
 | Fatia 3 | TC-FATIA3-02 | Regra de autorização (fronteira) |
-
