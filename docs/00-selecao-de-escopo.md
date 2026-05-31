@@ -15,11 +15,10 @@ As três fatias escolhidas representam os principais processos do sistema e abra
 # Fatia 1 – Realização de Reserva com Pagamento e Confirmação
 
 ## Histórias e requisitos cobertos
-
-* HOTL-003 – Busca de hospedagens
-* HOTL-004 – Disponibilidade de quartos
-* HOTL-005 – Realização de reservas
-* HOTL-006 – Confirmação de reserva
+- HOTL-003 – Busca de hospedagens
+- HOTL-004 – Disponibilidade de quartos
+- HOTL-005 – Realização de reservas
+- HOTL-006 – Confirmação de reserva
 
 ## Justificativa
 
@@ -30,17 +29,15 @@ Trata-se da funcionalidade mais crítica do sistema, pois é responsável pela g
 ## Aprendizado esperado
 
 A modelagem desta fatia permitirá explorar:
-
-* Integração entre múltiplos subsistemas;
-* Comunicação com serviços externos;
-* Fluxos alternativos e tratamento de falhas;
-* Regras de disponibilidade e prevenção de reservas duplicadas.
+- Integração entre múltiplos subsistemas;
+- Comunicação com serviços externos;
+- Fluxos alternativos e tratamento de falhas;
+- Regras de disponibilidade e prevenção de reservas duplicadas.
 
 # Fatia 2 – Cancelamento de Reserva e Aplicação de Política de Reembolso
 
 ## Histórias e requisitos cobertos
-
-* HOTL-007 – Cancelamento de reservas
+- HOTL-007 – Cancelamento de reservas
 
 ## Justificativa
 
@@ -51,19 +48,17 @@ Essa funcionalidade possui um ciclo de vida bem definido e múltiplos cenários 
 ## Aprendizado esperado
 
 A modelagem desta fatia permitirá explorar:
-
-* Transições de estado de uma reserva;
-* Regras condicionais de negócio;
-* Processos de reembolso;
-* Tratamento de exceções e restrições de cancelamento.
+- Transições de estado de uma reserva;
+- Regras condicionais de negócio;
+- Processos de reembolso;
+- Tratamento de exceções e restrições de cancelamento.
 
 # Fatia 3 – Avaliação de Hospedagens
 
 ## Histórias e requisitos cobertos
-
-* HOTL-008 – Avaliação de estabelecimentos
-* HOTL-009 – Exibição de avaliações
-* HOTL-010 – Histórico de reservas
+- HOTL-008 – Avaliação de estabelecimentos
+- HOTL-009 – Exibição de avaliações
+- HOTL-010 – Histórico de reservas
 
 ## Justificativa
 
@@ -76,11 +71,10 @@ Embora não seja uma funcionalidade crítica para a operação básica da plataf
 ## Aprendizado esperado
 
 A modelagem desta fatia permitirá explorar:
-
-* Regras de autorização baseadas em histórico de reservas;
-* Relacionamentos entre reservas, usuários e avaliações;
-* Cálculo e atualização de métricas agregadas;
-* Fluxos de interação pós-estadia.
+- Regras de autorização baseadas em histórico de reservas;
+- Relacionamentos entre reservas, usuários e avaliações;
+- Cálculo e atualização de métricas agregadas;
+- Fluxos de interação pós-estadia.
 
 # Cobertura dos Critérios de Seleção
 
@@ -95,9 +89,8 @@ Os três critérios exigidos pelo trabalho estão contemplados pelo conjunto das
 # Funcionalidades Fora do Escopo
 
 As funcionalidades abaixo não serão modeladas neste trabalho:
-
-* HOTL-001 – Cadastro de hospedagens;
-* HOTL-002 – Cadastro de tipos de quartos.
+- HOTL-001 – Cadastro de hospedagens;
+- HOTL-002 – Cadastro de tipos de quartos.
 
 Essas funcionalidades foram consideradas predominantemente operacionais e focadas em operações de cadastro (CRUD), apresentando menor complexidade de domínio quando comparadas às fatias selecionadas. Embora sejam importantes para o funcionamento da plataforma, sua modelagem agregaria menos valor ao objetivo do trabalho, que é explorar fluxos completos, integrações e regras de negócio relevantes.
 

@@ -15,8 +15,6 @@
 | **Critério de aprovação**       | (a) Registro da reserva criado no banco; (b) Status da reserva = CONFIRMADA; (c) Registro de pagamento criado com status APROVADO; (d) Confirmação enviada ao cliente. |
 | **Severidade em caso de falha** | Crítica                                                                                                                                                                |
 
----
-
 ### TC-FATIA1-02 (Caso de Fronteira – Pagamento Recusado)
 
 | Campo                           | Conteúdo                                                                                                                        |
@@ -29,8 +27,6 @@
 | **Resultado esperado**          | Sistema informa falha no pagamento; reserva não é confirmada; e-mail não é enviado.                                             |
 | **Critério de aprovação**       | (a) Mensagem de erro exibida; (b) Reserva não fica com status CONFIRMADA; (c) Nenhum e-mail de confirmação enviado.             |
 | **Severidade em caso de falha** | Crítica                                                                                                                         |
-
----
 
 # Fatia 2 — Cancelamento de Reserva e Aplicação de Política de Reembolso
 
@@ -47,8 +43,6 @@
 | **Critério de aprovação**       | (a) Status CANCELADA; (b) Reembolso de 100% do valor pago; (c) Registro de reembolso criado.                 |
 | **Severidade em caso de falha** | Alta                                                                                                         |
 
----
-
 ### TC-FATIA2-02 (Caso de Fronteira – Reserva Concluída)
 
 | Campo                           | Conteúdo                                                                                                                  |
@@ -61,8 +55,6 @@
 | **Resultado esperado**          | Sistema bloqueia operação e informa que reservas concluídas não podem ser canceladas.                                     |
 | **Critério de aprovação**       | (a) Nenhuma alteração no status da reserva; (b) Nenhum reembolso processado; (c) Mensagem informativa exibida ao usuário. |
 | **Severidade em caso de falha** | Alta                                                                                                                      |
-
----
 
 # Fatia 3 — Avaliação de Hospedagens
 
@@ -94,8 +86,6 @@
 | **Critério de aprovação**       | (a) Nenhuma avaliação criada; (b) Mensagem de bloqueio exibida; (c) Nenhuma alteração na nota média da hospedagem. |
 | **Severidade em caso de falha** | Alta                                                                                                               |
 
----
-
 # Resumo dos Casos de Teste
 
 | Fatia   | Caso         | Tipo                             |
@@ -106,3 +96,4 @@
 | Fatia 2 | TC-FATIA2-02 | Transição crítica de estado      |
 | Fatia 3 | TC-FATIA3-01 | Caminho feliz                    |
 | Fatia 3 | TC-FATIA3-02 | Regra de autorização (fronteira) |
+

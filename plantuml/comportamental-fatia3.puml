@@ -1,0 +1,49 @@
+@startuml
+title Processo de Avaliação de Hospedagem
+
+start
+
+:Cliente acessa histórico de reservas;
+
+:Seleciona hospedagem para avaliar;
+
+:Sistema localiza reserva associada;
+
+if (Reserva concluída?) then (Sim)
+
+    :Exibir formulário de avaliação;
+
+    :Cliente informa nota;
+    :Cliente informa comentário;
+
+    :Validar dados informados;
+
+    if (Dados válidos?) then (Sim)
+
+        :Registrar avaliação;
+
+        :Associar avaliação à reserva;
+
+        :Recalcular nota média da hospedagem;
+
+        :Atualizar informações da hospedagem;
+
+        :Publicar avaliação;
+
+        :Exibir mensagem de sucesso;
+
+    else (Não)
+
+        :Exibir erros de validação;
+
+    endif
+
+else (Não)
+
+    :Informar que apenas reservas concluídas podem ser avaliadas;
+
+endif
+
+stop
+
+@enduml
