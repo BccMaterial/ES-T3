@@ -31,4 +31,5 @@ Foram modeladas apenas entidades cujos dados precisam ser armazenados permanente
 
 Abaixo, uma lista a respeito das divergências esperadas entre o diagrama MER e o diagrama de classes:
 
-- **Serviços e Interfaces:** As classes de 
+- **Serviços e Interfaces:** Os serviços intermediários como pagamento e e-mail não aparecem no MER porque representam lógica de negócio ou integrações externas;
+- **Enumerações:** As enumerações são valores pré-definidos de alguns campos, que no diagrama são representados como texto
