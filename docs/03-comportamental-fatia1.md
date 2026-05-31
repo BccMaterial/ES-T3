@@ -27,8 +27,6 @@ O fluxo de reserva atravessa diferentes responsabilidades: consulta de disponibi
    - o cliente é informado sobre a falha.
 7. Caso não exista disponibilidade para o período solicitado, o sistema informa imediatamente a indisponibilidade ao cliente.
 
----
-
 # Cenários Alternativos Modelados
 
 ## A1 — Quarto indisponível

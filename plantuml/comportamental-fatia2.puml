@@ -1,0 +1,41 @@
+@startuml
+title Ciclo de Vida da Reserva e Cancelamento
+
+[*] --> PENDENTE
+
+PENDENTE : entry / criarReserva()
+
+PENDENTE --> CONFIRMADA : pagamentoAprovado
+PENDENTE --> CANCELADA : cancelamentoSolicitado
+
+CONFIRMADA : do / reservaAtiva()
+
+CONFIRMADA --> CONCLUIDA : checkOutRealizado
+
+CONFIRMADA --> CANCELADA : cancelamentoSolicitado\n[prazoReembolsoIntegral]
+
+CONFIRMADA --> CANCELADA : cancelamentoSolicitado\n[prazoReembolsoParcial]
+
+CONCLUIDA : do / estadiaFinalizada()
+
+CONCLUIDA --> [*]
+
+state CANCELADA {
+
+    state "Reembolso Integral" as REEMBOLSO_INTEGRAL
+    state "Reembolso Parcial" as REEMBOLSO_PARCIAL
+    state "Sem Reembolso" as SEM_REEMBOLSO
+
+    [*] --> REEMBOLSO_INTEGRAL : dentroPrazoIntegral
+
+    [*] --> REEMBOLSO_PARCIAL : dentroPrazoParcial
+
+    [*] --> SEM_REEMBOLSO : foraDoPrazo
+
+}
+
+CANCELADA : entry / processarReembolso()
+
+CANCELADA --> [*]
+
+@enduml
