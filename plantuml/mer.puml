@@ -1,0 +1,81 @@
+@startuml
+
+entity cliente {
+    * id : UUID <<PK>>
+    --
+    nome : VARCHAR(100)
+    email : VARCHAR(255)
+    senha_hash : VARCHAR(255)
+}
+
+entity hospedagem {
+    * id : UUID <<PK>>
+    --
+    nome : VARCHAR(150)
+    endereco : VARCHAR(255)
+    valor_diaria : DECIMAL(10,2)
+    descricao : TEXT
+}
+
+entity tipo_quarto {
+    * id : UUID <<PK>>
+    --
+    nome : VARCHAR(100)
+}
+
+entity politica_cancelamento {
+    * id : UUID <<PK>>
+    --
+    prazo_horas : INTEGER
+    percentual_reembolso : DECIMAL(5,2)
+}
+
+entity reserva {
+    * id : UUID <<PK>>
+    --
+    cliente_id : UUID <<FK>>
+    tipo_quarto_id : UUID <<FK>>
+    politica_cancelamento_id : UUID <<FK>>
+
+    data_checkin : DATE
+    data_checkout : DATE
+
+    valor_total : DECIMAL(10,2)
+
+    status : VARCHAR(20)
+}
+
+entity pagamento {
+    * id : UUID <<PK>>
+    --
+    reserva_id : UUID <<FK>>
+
+    valor : DECIMAL(10,2)
+    data_pagamento : TIMESTAMP
+    status : VARCHAR(20)
+}
+
+entity avaliacao {
+    * id : UUID <<PK>>
+    --
+    hospedagem_id : UUID <<FK>>
+    reserva_id : UUID <<FK>>
+
+    nota : INTEGER
+    comentario : TEXT
+    data_criacao : DATE
+}
+
+cliente ||--o{ reserva
+
+reserva ||--o{ tipo_quarto
+
+politica_cancelamento ||--o{ reserva
+
+reserva ||--|| pagamento
+
+hospedagem ||--o{ reserva
+
+reserva ||--o| avaliacao
+
+@enduml
