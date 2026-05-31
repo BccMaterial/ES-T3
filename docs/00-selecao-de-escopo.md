@@ -12,8 +12,6 @@ A seleção foi realizada com base nos critérios estabelecidos pelo trabalho:
 
 As três fatias escolhidas representam os principais processos do sistema e abrangem diferentes aspectos da modelagem estrutural, comportamental e de persistência.
 
----
-
 # Fatia 1 – Realização de Reserva com Pagamento e Confirmação
 
 ## Histórias e requisitos cobertos
@@ -38,8 +36,6 @@ A modelagem desta fatia permitirá explorar:
 * Fluxos alternativos e tratamento de falhas;
 * Regras de disponibilidade e prevenção de reservas duplicadas.
 
----
-
 # Fatia 2 – Cancelamento de Reserva e Aplicação de Política de Reembolso
 
 ## Histórias e requisitos cobertos
@@ -60,8 +56,6 @@ A modelagem desta fatia permitirá explorar:
 * Regras condicionais de negócio;
 * Processos de reembolso;
 * Tratamento de exceções e restrições de cancelamento.
-
----
 
 # Fatia 3 – Avaliação de Hospedagens
 
@@ -88,8 +82,6 @@ A modelagem desta fatia permitirá explorar:
 * Cálculo e atualização de métricas agregadas;
 * Fluxos de interação pós-estadia.
 
----
-
 # Cobertura dos Critérios de Seleção
 
 | Critério                             | Fatia 1 | Fatia 2 | Fatia 3 |
@@ -99,8 +91,6 @@ A modelagem desta fatia permitirá explorar:
 | Regras de negócio não triviais       | ✓       | ✓       | ✓       |
 
 Os três critérios exigidos pelo trabalho estão contemplados pelo conjunto das fatias selecionadas.
-
----
 
 # Funcionalidades Fora do Escopo
 
