@@ -17,12 +17,12 @@ Essa relação garante que todas as decisões de modelagem estejam alinhadas aos
 ## Cobertura das Fatias Selecionadas
 
 As três fatias escolhidas na Seção 0 encontram-se completamente rastreadas ao longo dos artefatos produzidos:
-- **Diagrama de Classes**: representa a estrutura estática necessária para suportar os fluxos das três fatias.
-- **MER**: modela as entidades persistentes derivadas das classes de domínio.
-- **Diagramas Comportamentais**: representam o comportamento principal de cada fatia utilizando diferentes perspectivas da UML.
-- **Casos de Teste**: validam tanto os fluxos principais quanto cenários de exceção e fronteira.
+- **Diagrama de Classes**: descreve a estrutura que precisa ser criada para sustentar os fluxos de três fatias.
+- **MER**: apresenta as entidades persistidas, derivadas das classes de domínio.
+- **Diagramas Comportamentais**: descrevem o comportamento essencial de cada fatia a partir de diferentes pontos de vista dentro da UML.
+- **Casos de Teste**: realizam a verificação dos fluxos principais e também dos casos de exceção e fronteira.
 
-Dessa forma, cada requisito funcional selecionado possui correspondência explícita com elementos estruturais, comportamentais e de validação, garantindo consistência entre os modelos produzidos e o escopo definido para o trabalho.
+De maneira geral, todos os requisitos funcionais selecionados têm seus elementos estruturais, comportamentais e de validação associados.
 
 ## Matriz Resumida de Cobertura
 
