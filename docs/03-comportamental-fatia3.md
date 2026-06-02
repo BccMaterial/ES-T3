@@ -4,11 +4,11 @@
 
 ## Justificativa da Escolha
 
-Optou-se pelo uso de um **Diagrama de Atividades**, pois esta fatia representa um fluxo de trabalho composto por diversas etapas e decisões de negócio.
+Foi optado pelo **Diagrama de Atividades**, devido à natureza desta fatia ser um fluxograma que se divide em várias etapas e decisões de negócio.
 
-O processo envolve a validação da elegibilidade do cliente para realizar uma avaliação, o preenchimento da avaliação, o armazenamento dos dados e a atualização da nota média da hospedagem.
+Este processo envolve, inicialmente, a verificação de elegibilidade do cliente para realizar a avaliação, seguida pela execução desta avaliação, arquivamento de informações e atualização da pontuação da hospedagem.
 
-A utilização de atividades e nós de decisão permite representar claramente as regras de autorização e o fluxo completo até a publicação da avaliação.
+Com as atividades e nós de decisão é possível descrever perfeitamente as regras de autorização e fluxos de trabalho até a publicação da avaliação.
 
 # Diagrama de Atividades
 
@@ -16,20 +16,19 @@ A utilização de atividades e nós de decisão permite representar claramente a
 
 # Descrição do Fluxo
 
-1. O cliente acessa seu histórico de reservas.
-2. Seleciona uma hospedagem para avaliar.
-3. O sistema verifica se existe uma reserva concluída associada à hospedagem.
-4. Caso a reserva esteja concluída:
-   - o formulário de avaliação é disponibilizado;
-   - o cliente informa nota e comentário;
-   - os dados são validados.
-5. Se os dados forem válidos:
-   - a avaliação é registrada;
-   - a avaliação é associada à reserva correspondente;
-   - a nota média da hospedagem é recalculada;
-   - a avaliação é publicada.
-6. Caso a reserva não esteja concluída, o sistema impede a avaliação e informa o motivo ao usuário.
-
+1. O cliente consulta o histórico das reservas.
+2. Escolhe uma hospedagem para ser avaliada.
+3. Verifica se há uma reserva concluída para essa hospedagem.
+4. Em caso positivo:
+   - o formulário de avaliação é apresentado;
+   - o cliente informa a nota e a observação;
+   - o formulário é validado.
+5. Ao verificar-se que os dados são válidos:
+   - o registro é efetuado;
+   - a avaliação é vinculada à reserva;
+   - é recolculada a nota da hospedagem;
+   - a avaliação é divulgada.
+6. Se a reserva ainda não for concluída, então é impedida a avaliação com justificativa apresentada para o usuário.
 ---
 
 # Decisões Representadas
