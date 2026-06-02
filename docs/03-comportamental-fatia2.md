@@ -4,11 +4,11 @@
 
 ## Justificativa da Escolha
 
-Optou-se pelo uso de um **Diagrama de Estados**, pois esta fatia é centrada no ciclo de vida da entidade `Reserva`.
+Selecionou-se como forma de modelagem o **Diagrama de Estados** uma vez que essa fatia está voltada para o ciclo de vida da entidade `Reserva`.
 
-O processo de cancelamento depende do estado atual da reserva e da política de cancelamento associada. Além disso, diferentes transições podem resultar em reembolso integral, reembolso parcial ou impossibilidade de cancelamento.
+Os critérios de cancelamento variam conforme o estado atual da Reserva e a política de cancelamento da Reserva. Diversas transições podem levar ao retorno total, parcial ou ainda não permitir o cancelamento da Reserva.
 
-O diagrama de estados permite representar claramente os eventos que provocam mudanças de estado e as regras de negócio associadas a cada transição.
+O diagrama de estados fornece a capacidade de visualizar os eventos que levam à mudança de estados, bem como suas respectivas regras de negócio.
 
 # Diagrama de Estados
 
