@@ -22,13 +22,13 @@ As três fatias escolhidas representam os principais processos do sistema e abra
 
 ## Justificativa
 
-Esta fatia representa o principal fluxo de negócio da plataforma. O usuário pesquisa hospedagens, verifica a disponibilidade para um período específico, realiza o pagamento e recebe a confirmação da reserva.
+A fatia 1 representa o principal fluxo de negócio da plataforma. Nela, o usuário pesquisa hospedagens, verifica a disponibilidade para um período específico, realiza o pagamento e recebe a confirmação da reserva.
 
-Trata-se da funcionalidade mais crítica do sistema, pois é responsável pela geração de valor tanto para clientes quanto para estabelecimentos. Além disso, envolve integração com um gateway de pagamento externo e com um serviço de envio de e-mails.
+Nesta fatia está presente a funcionalidade mais crítica do sistema, ja que é responsável por gerar valor tanto para clientes quanto para estabelecimentos. Ademais, envolve a integração com um gateway de pagamento externo e com um serviço de envio de e-mails.
 
 ## Aprendizado esperado
 
-A modelagem desta fatia permitirá explorar:
+Modelando esta fatia, podemos explorar:
 - Integração entre múltiplos subsistemas;
 - Comunicação com serviços externos;
 - Fluxos alternativos e tratamento de falhas;
@@ -41,13 +41,13 @@ A modelagem desta fatia permitirá explorar:
 
 ## Justificativa
 
-Embora seja um fluxo secundário em relação à realização da reserva, o cancelamento apresenta regras de negócio relevantes. O sistema deve validar políticas de cancelamento, atualizar o estado da reserva e, quando aplicável, realizar reembolsos parciais ou integrais.
+Por mais que seja um fluxo secundário quando comparado a realização da reserva, o cancelamento possuí regras de negócio relevantes. O sistema tem as seguintes obrigações: validar políticas de cancelamento, atualizar o estado da reserva e, quando aplicável, realizar reembolsos parciais ou integrais.
 
-Essa funcionalidade possui um ciclo de vida bem definido e múltiplos cenários possíveis, tornando-a adequada para modelagem aprofundada.
+Um ciclo de vida bem definido e mútiplos cenários possíveis torna essa funcionalidade adequada para modelagem profunda.
 
 ## Aprendizado esperado
 
-A modelagem desta fatia permitirá explorar:
+Modelando esta fatia, podemos explorar:
 - Transições de estado de uma reserva;
 - Regras condicionais de negócio;
 - Processos de reembolso;
@@ -62,15 +62,15 @@ A modelagem desta fatia permitirá explorar:
 
 ## Justificativa
 
-Esta fatia foi selecionada por representar uma funcionalidade voltada à experiência do usuário e à reputação dos estabelecimentos cadastrados na plataforma.
+O motivo pela seleção dessa fatia é sua funcionalidade direcionada a experiência do usuário e à reputação dos estabelecimentos cadastrados na plataforma.
 
-Para que uma avaliação seja registrada, o sistema deve validar se o usuário possui uma estadia concluída associada à hospedagem avaliada. Além disso, o sistema deve calcular e exibir corretamente a nota média do estabelecimento para outros usuários.
+Para que ocorra o registro de uma avaliação, o sistema deve verificar se o usuário possuí uma estadia concluída associada à hospedagem que ele está avaliando. Não apenas isso, o sistema também deve realizar o cálculo e a exibição da nota média do establecimento para usuários.
 
-Embora não seja uma funcionalidade crítica para a operação básica da plataforma, ela apresenta regras de negócio importantes e contribui significativamente para a qualidade das informações disponibilizadas aos clientes.
+Por mais que não seja uma funcionalidade crítica para o funcionamento da plataforma, ela possuí regras de negócio importantes e tem uma contribuição significativa para a qualidade das informações disponibilizadas aos clientes.
 
 ## Aprendizado esperado
 
-A modelagem desta fatia permitirá explorar:
+Modelando esta fatia, podemos explorar:
 - Regras de autorização baseadas em histórico de reservas;
 - Relacionamentos entre reservas, usuários e avaliações;
 - Cálculo e atualização de métricas agregadas;
@@ -84,15 +84,14 @@ A modelagem desta fatia permitirá explorar:
 | Múltiplos subsistemas ou integrações | ✓       | ✓       |         |
 | Regras de negócio não triviais       | ✓       | ✓       | ✓       |
 
-Os três critérios exigidos pelo trabalho estão contemplados pelo conjunto das fatias selecionadas.
+Os três aspectos solicitados pela tarefa estão incluídos no grupo de fatias escolhidas.
 
 # Funcionalidades Fora do Escopo
 
-As funcionalidades abaixo não serão modeladas neste trabalho:
+As seguintes funcionalidades não serão modeladas neste trabalho:
 - HOTL-001 – Cadastro de hospedagens;
 - HOTL-002 – Cadastro de tipos de quartos.
 
-Essas funcionalidades foram consideradas predominantemente operacionais e focadas em operações de cadastro (CRUD), apresentando menor complexidade de domínio quando comparadas às fatias selecionadas. Embora sejam importantes para o funcionamento da plataforma, sua modelagem agregaria menos valor ao objetivo do trabalho, que é explorar fluxos completos, integrações e regras de negócio relevantes.
+Essas características foram vistas essencialmente como funcionais e centradas em processos de registro (CRUD), mostrando uma complexidade inferior em relação às partes escolhidas. Embora possuam importância para a operação da plataforma, sua modelagem traria menor contribuição ao propósito do projeto, que é investigar fluxos completos, integrações e regras comerciais pertinentes.
 
-Além disso, parte das entidades criadas por essas funcionalidades (Hospedagem e TipoQuarto) já aparecerá naturalmente nos modelos das demais fatias, garantindo sua representação indireta nos artefatos produzidos.
-
+Além do mais, algumas das entidades geradas por essas características (Hospedagem e TipoQuarto) estarão presentes de forma natural nos modelos das outras partes, assegurando sua representação indireta nos documentos elaborados.
