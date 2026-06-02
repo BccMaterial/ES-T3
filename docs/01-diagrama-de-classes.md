@@ -2,21 +2,21 @@
 
 ## Objetivo
 
-Este diagrama modela as principais entidades envolvidas nas três fatias selecionadas:
+Neste diagrama, temos a modelagem das principais entidades que atuam nas seguintes fatias:
 
-1. Realização de reserva com pagamento e confirmação;
-2. Cancelamento de reserva com aplicação de política de reembolso;
-3. Avaliação de hospedagens após estadia.
+1. Reservar, pagar e confirmar;
+2. Cancelar reserva com a política de reembolso;
+3. Avaliar as instalações durante a estadia.
 
-Foram modeladas apenas as classes necessárias para representar essas funcionalidades, evitando incluir elementos que não participam diretamente das fatias selecionadas.
+São feitas as classificações dos itens apenas que são pertinentes à modelagem desseas fatias, não fazendo parte elementos que não se relacionam com eles.
 
 ## Decisões de Modelagem
 
-- A classe `Usuario` foi definida como abstrata, permitindo futuras especializações, como por exemplo "Administrador";
-- A integração com pagamento e envio de e-mails foi representada através de interfaces, uma vez que correspondem a serviços externos;
-- A relação entre `Reserva` e `Pagamento` foi modelada como composição, pois um pagamento não existe sem uma reserva associada;
-- A relação entre `Reserva` e `Avaliacao` foi modelada como composição, pois uma avaliação não existe sem uma reserva associada;
-- A política de cancelamento foi separada em uma classe própria para encapsular as regras de negócio.
+- A classe `Usuario` foi definida como abstrata para possibilitar especialização no futuro, como por exemplo "Administrador";
+- A integração do pagamento e envio de emails foi realizada através de interfaces já que se trata de serviço externo;
+- A relação de `Reserva` e `Pagamento` foi feita por meio de composição já que o pagamento não tem sentido sem a reserva associada;
+- A relação de `Reserva` e `Avaliacao` foi feita por meio de composição já que a avaliação não tem sentido sem a reserva associada;
+- As políticas de cancelamento foram modeladas em uma classe à parte.
 
 ## Diagrama (PlantUML)
 
