@@ -4,9 +4,9 @@
 
 ## Justificativa da Escolha
 
-Optou-se pelo uso de um **Diagrama de Sequência**, pois esta fatia envolve a interação entre múltiplos componentes do sistema e serviços externos.
+Decidiu-se utilizar um **Diagrama de Sequência**, visto que esta fatia trata de uma interação de várias partes do sistema.
 
-O fluxo de reserva atravessa diferentes responsabilidades: consulta de disponibilidade, criação da reserva, processamento do pagamento e envio da confirmação ao cliente. Além disso, existem cenários alternativos relevantes, como indisponibilidade de quartos ou falha no pagamento, que podem ser representados através de fragmentos condicionais da UML (`alt`).
+O fluxo de reserva é composto por diferentes responsabilidades: verificar disponibilidade, realizar a reserva, realizar o pagamento e notificar o cliente sobre a reserva. Existem ainda cenários alternativos como, por exemplo, quando não há quartos disponíveis ou quando ocorre um problema com o pagamento, que poderão ser abordados por fragmentos `alt` da UML.
 
 # Diagrama de Sequência
 
@@ -14,29 +14,29 @@ O fluxo de reserva atravessa diferentes responsabilidades: consulta de disponibi
 
 # Descrição do Fluxo
 
-1. O cliente solicita a realização de uma reserva informando datas de check-in, check-out e o tipo de quarto desejado.
-2. O sistema consulta a disponibilidade para o período solicitado.
-3. Caso exista disponibilidade, uma reserva é criada em estado inicial.
-4. O sistema inicia o processamento do pagamento através do gateway externo.
-5. Se o pagamento for aprovado:
-   - a reserva é confirmada;
-   - um e-mail de confirmação é enviado;
-   - o cliente recebe a confirmação da reserva.
-6. Se o pagamento for recusado:
-   - a reserva não é confirmada;
-   - o cliente é informado sobre a falha.
-7. Caso não exista disponibilidade para o período solicitado, o sistema informa imediatamente a indisponibilidade ao cliente.
+1. O cliente faz um pedido de reservas indicando datas de check-in e check-out, bem como o tipo de quarto que deseja.
+2. O sistema verifica a disponibilidade no período pedido pelo cliente.
+3. Quando existe disponibilidade, é feita uma reserva com status inicial.
+4. É feito o pagamento através do gateway.
+5. Quando o pagamento é realizado com sucesso:
+   - a reserva é efetuada;
+   - é enviado um e-mail confirmando a reserva;
+   - a confirmação de reserva é feita para o cliente.
+6. Quando o pagamento é negado pelo banco:
+   - a reserva não é efetuada;
+   - o cliente é informado sobre a situação.
+7. Quando não há disponibilidade no período desejado pelo cliente, é notificado imediatamente.
 
 # Cenários Alternativos Modelados
 
 ## A1 — Quarto indisponível
 
-Durante a verificação de disponibilidade, o sistema identifica que não existem vagas para o período solicitado.
+Na checagem da disponibilidade, o sistema verifica que não há disponibilidade para o período desejado.
 
-Resultado:
-- Reserva não é criada;
-- Pagamento não é processado;
-- Cliente recebe mensagem de indisponibilidade.
+Conclusão:
+- Não será realizada a reserva;
+- O pagamento não será efetuado;
+- O cliente receberá uma mensagem de indisponibilidade.
 
 ## A2 — Pagamento recusado
 
