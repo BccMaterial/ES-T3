@@ -22,9 +22,9 @@ As três fatias escolhidas representam os principais processos do sistema e abra
 
 ## Justificativa
 
-A fatia 1 representa o principal fluxo de negócio da plataforma. Nela, o usuário pesquisa hospedagens, verifica a disponibilidade para um período específico, realiza o pagamento e recebe a confirmação da reserva.
+A fatia 1 corresponde ao principal fluxo de negócios da plataforma, onde o usuário faz buscas de hospedagens, verifica a disponibilidade de uma determinada data, paga a sua reserva e a confirma.
 
-Nesta fatia está presente a funcionalidade mais crítica do sistema, ja que é responsável por gerar valor tanto para clientes quanto para estabelecimentos. Ademais, envolve a integração com um gateway de pagamento externo e com um serviço de envio de e-mails.
+Neste bloco há a funcionalidade mais importante do sistema, pois é ela quem cria valor para os clientes bem como para os estabelecimentos. Além disso, inclui a interação com um gateway de pagamento externo e também com uma ferramenta para enviar e-mails.
 
 ## Aprendizado esperado
 
@@ -62,11 +62,11 @@ Modelando esta fatia, podemos explorar:
 
 ## Justificativa
 
-O motivo pela seleção dessa fatia é sua funcionalidade direcionada a experiência do usuário e à reputação dos estabelecimentos cadastrados na plataforma.
+A escolha desta fatia baseia-se no funcionamento dela com ênfase na atividade do usuário e no nome da localidade sendo analisada no sistema.
 
-Para que ocorra o registro de uma avaliação, o sistema deve verificar se o usuário possuí uma estadia concluída associada à hospedagem que ele está avaliando. Não apenas isso, o sistema também deve realizar o cálculo e a exibição da nota média do establecimento para usuários.
+Para registrar uma avaliação, o sistema precisa verificar se já existe uma estadia do usuário no hotel que será avaliado por ele. O sistema também faz o cálculo da média das avaliações para o local e a exibe.
 
-Por mais que não seja uma funcionalidade crítica para o funcionamento da plataforma, ela possuí regras de negócio importantes e tem uma contribuição significativa para a qualidade das informações disponibilizadas aos clientes.
+Mesmo não sendo uma funcionalidade necessária para o sistema realizar seu trabalho corretamente, ela possui regras de negócio importantes e uma grande contribuição a qualidade das informações fornecidas aos clientes.
 
 ## Aprendizado esperado
 
